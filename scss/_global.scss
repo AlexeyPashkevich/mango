@@ -1,0 +1,145 @@
+@import "vars";
+
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+html,
+body {
+  height: 100%;
+}
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+button,
+span,
+div {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  font-weight: 400;
+}
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+img {
+  display: block;
+}
+button {
+  cursor: pointer;
+}
+body {
+  font-weight: 400;
+  overflow-x: hidden;
+  position: relative;
+  min-width: 320px;
+  font-family: "Montserrat", sans-serif;
+  color: $text;
+}
+.container {
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.container-mini {
+  max-width: 1000px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+.content {
+  flex: 1 0 auto;
+}
+.footer {
+  flex: 0 0 auto;
+}
+.breadcrumbs {
+  padding: 30px 0 0 0;
+  border-top: 1px solid #dfdfdf;
+  &-list {
+    li {
+      display: inline-block;
+      &::after {
+        content: "/";
+        font-size: 12px;
+        margin-left: 7px;
+        margin-right: 2px;
+        line-height: 12px;
+      }
+    }
+    li:nth-last-child(1) {
+      &::after {
+        display: none;
+      }
+    }
+    a,
+    span {
+      font-size: 10px;
+      line-height: 12px;
+    }
+  }
+}
+.title {
+  font-weight: 900;
+  font-size: 25px;
+  line-height: 31px;
+}
+.container-header-content {
+  max-width: 1300px;
+  padding: 0 15px;
+  margin-left: auto;
+}
+.tab.tab--active {
+  color: #4d7fcc;
+}
+.tabs-content {
+  display: none;
+}
+.tabs-content.tabs-content--active {
+  display: block;
+}
+
+.pagination-list {
+  display: flex;
+  justify-content: center;
+  margin: 28px 0;
+  .pagination-list__item + .pagination-list__item {
+    margin-left: 15px;
+  }
+  &__link {
+    padding: 6px 10px;
+    border: 1px solid #c8c8c8;
+    font-size: 12px;
+    line-height: 15px;
+    background-color: transparent;
+  }
+  .pagination-list__link.pagination-list__link--active {
+    border: 1px solid transparent;
+    background-color: $text;
+    color: #fff;
+  }
+}
+.pagination-list.pagination-def{
+  margin-left: 100px;
+}
